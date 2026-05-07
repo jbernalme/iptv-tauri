@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
+import { Badge } from "@/components/ui/badge";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -28,7 +29,7 @@ function App() {
         </a>
       </div>
       <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
+      <Badge>Badge</Badge>
       <form
         className="row bg-gray-200 p-4 rounded-lg"
         onSubmit={(e) => {
