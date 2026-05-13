@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -14,7 +15,7 @@ function App() {
   }
 
   return (
-    <main className="container">
+    <main className="container p">
       <h1>Welcome to Tauri + React</h1>
 
       <div className="row">
@@ -30,6 +31,7 @@ function App() {
       </div>
       <p>Click on the Tauri, Vite, and React logos to learn more.</p>
       <Badge>Badge</Badge>
+
       <form
         className="row bg-gray-200 p-4 rounded-lg"
         onSubmit={(e) => {
@@ -45,6 +47,9 @@ function App() {
         <button type="submit">Greet</button>
       </form>
       <p>{greetMsg}</p>
+      <Link to="/prueba" style={{ fontSize: "20px", color: "#646cff" }}>
+        Ir a la página de prueba
+      </Link>
     </main>
   );
 }
