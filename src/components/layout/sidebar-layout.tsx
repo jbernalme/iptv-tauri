@@ -6,9 +6,11 @@ export default function SidebarLayout() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className=" w-full ">
         <SidebarTrigger />
-        <Outlet />
+        <section className=" p-4">
+          <Outlet />
+        </section>
       </main>
     </SidebarProvider>
   );

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import SidebarLayout from "@/components/layout/sidebar-layout";
+import ConfigList from "./components/pages/config-list";
 // Importa aquí tus otras páginas, por ejemplo:
 // import Settings from "./pages/Settings";
 
@@ -64,6 +65,10 @@ const router = createHashRouter([
             <a href="#/">Volver al inicio</a>
           </div>
         ),
+      },
+      {
+        path: "/config",
+        element: <ConfigList />,
       },
     ],
   },

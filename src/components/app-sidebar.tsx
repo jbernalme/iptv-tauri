@@ -14,6 +14,7 @@ import Logo from "@/components/logo";
 import {
   ClapperboardIcon,
   HeartIcon,
+  ListVideoIcon,
   MonitorPlayIcon,
   TvIcon,
 } from "lucide-react";
@@ -42,6 +43,11 @@ const data = {
       href: "/favs",
       icon: HeartIcon,
     },
+    {
+      title: "Config List",
+      href: "/config",
+      icon: ListVideoIcon,
+    },
   ],
 };
 
@@ -55,7 +61,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent className="">
         <SidebarGroup className="">
-          <SidebarGroupContent className=" ">
+          <SidebarGroupContent className="h fgdf ">
             <SidebarMenu className="">
               {data.navMain.map((item) => (
                 <SidebarMenuItem key={item.title} className="w-full">
